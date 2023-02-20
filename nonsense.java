@@ -18,7 +18,7 @@ import java.util.ArrayList;
 	*
 	* @param args[0] The number of words to be randomly selected.
 	*/
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		int wordsNeeded = 0;
 		
 		// Check for a command line argumemt
@@ -42,27 +42,27 @@ import java.util.ArrayList;
 		}
 		
 		// Create an input scanner from the standard input
-        Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		sc.useDelimiter(System.getProperty("line.separator"));
 
 		// Create a list for the lines being input
-        List<String> input = new ArrayList<>();
-        while (sc.hasNextLine()) {
-            input.add(sc.nextLine());
-        }
+		List<String> input = new ArrayList<>();
+		while (sc.hasNextLine()) {
+			input.add(sc.nextLine());
+		}
 		
 		// Concatenate all of the input lines and then seperate them by non-alphasnumeric
-        String[] words = String.join(" ", input).split("\\W+");
+		String[] words = String.join(" ", input).split("\\W+");
 
-        // Create a random object
+		// Create a random object
 		Random rand = new Random();
 		
 		// Display the random sample of words
-        for (int i = 0; i < wordsNeeded; i++) {
-            int randomIndex = rand.nextInt(words.length);
-            System.out.print(words[randomIndex] + " ");
-        }
-    }
+		for (int i = 0; i < wordsNeeded; i++) {
+			int randomIndex = rand.nextInt(words.length);
+			System.out.print(words[randomIndex] + " ");
+		}
+	}
 }
 
 
